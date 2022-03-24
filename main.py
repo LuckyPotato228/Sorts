@@ -19,14 +19,24 @@ def select_sort():
 def insertion_sort():
     n = int(input())
     arr = [int(i) for i in input().split()]
-    b = arr[::1]
-    for i in range(n + 1):
-        b = list(map(str,arr))
-        index = arr.index(min(arr))
-        num = str(arr[index])
-        b[index] = str('<' + num + '>')
-        b.insert(i,'|')
-        print(b)
+    b = []
+    count = 0
+    for i in range(len(arr)):
+        b += [arr[i]]
+        b[i] =
+        print(b + arr[i+1:])
+        if i>0:
+            while b[i-count] < b[i-count-1]:
+                if b[i-count-1] > b[i-count]:
+                    b[i-count-1],b[i-count] = b[i-count],b[i-count-1]
+                    count+=1
+                    print(b + arr[i+1:])
+
+        count = 0
+        print()
+
+
+
 
 
 
