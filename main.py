@@ -63,7 +63,7 @@ def Bubble_sort():
     print(*arr)
 
 
-def Shaker_sort:
+def Shaker_sort():
     pass
 
 def Merge_Sort():
