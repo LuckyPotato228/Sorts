@@ -1,4 +1,4 @@
-def Select_sort():
+def select_sort():
     n = int(input())
     arr = [int(i) for i in input().split()]
     b = arr[::1]
@@ -16,7 +16,7 @@ def Select_sort():
             break
 
 
-def Insertion_sort():
+def insertion_sort():
     n = int(input())
     arr = [int(i) for i in input().split()]
     b = []
@@ -44,12 +44,11 @@ def Insertion_sort():
     print(*b)
 
 
-def Bubble_sort():
+def bubble_sort():
     n = int(input())
     arr = [int(i) for i in input().split()]
     print(*arr,'|')
     print("------------")
-    count = int(1)
     for i in range(n-1):
         for j, val in enumerate(arr):
             target_num = str(arr[j])
@@ -63,9 +62,36 @@ def Bubble_sort():
     print(*arr)
 
 
-def Shaker_sort():
-    pass
+def show(lst, l, r, cur):
+    for j in range(len(lst)):
+        print(f'{"| " if j == l else ""}{"<" if j == cur else ""}{lst[j]}{">" if j == cur else ""}{" |" if j == r else ""}', end = ' ')
+    print("")
 
-def Merge_Sort():
+
+def shaker_sort():
+    n = int(input())
+    arr = [int(i) for i in input().split()]
+
+
+
+
+
+def merge_sort():
     pass
+    """
+    n = int(input())
+    arr_1 = [int(i) for i in input().split()]
+    k = int(input())
+    arr_2 = [int(i) for i in input().split()]
+    result = []
+    for i in range(n+k):
+        target_num_1 = str(arr_1[i])
+        target_num_1 = ("<" + target_num_1 + ">")
+        target_num_2 = str(arr_2[i])
+        target_num_2 = ("<" + target_num_2 + ">")
+        print(arr_1[:i],target_num_1,*arr_1[i+1:])
+        print(arr_2[:i],target_num_2, *arr_2[i + 1:])
+    """
+
+
 
