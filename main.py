@@ -70,10 +70,37 @@ def show(lst, l, r, cur):
 
 def shaker_sort():
     n = int(input())
+    l = 0
+    r = n-1
     arr = [int(i) for i in input().split()]
+    for i in range(n-1):
+        if count ==0 :
+            break
+        count = 0
+        for j in range(len(arr[l:r+1])):
+            cur = j
+            show(arr,l,r,cur)
+            if j == r:
+                break
+            if arr[j] < arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                count+=1
+
+        r-=1
+        print("------------")
+        s = r
+        while s!=l:
+            s-=1
+            cur = s
+            show(arr, l, r, cur)
+            if s == l+1:
+                break
+            if arr[s] > arr[s - 1]:
+                arr[s], arr[s - 1] = arr[s - 1], arr[s]
+        l+=1
 
 
-
+shaker_sort()
 
 
 def merge_sort():
@@ -92,6 +119,5 @@ def merge_sort():
         print(arr_1[:i],target_num_1,*arr_1[i+1:])
         print(arr_2[:i],target_num_2, *arr_2[i + 1:])
     """
-
 
 
